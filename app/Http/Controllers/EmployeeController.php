@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Employee;
 use App\Supplier;
+use Brian2694\Toastr\Facades\Toastr;
 use Illuminate\Http\Request;
 
 class EmployeeController extends Controller
@@ -78,7 +79,8 @@ class EmployeeController extends Controller
      */
     public function show($id)
     {
-        //
+        $employee = Employee::findOrFail($id);
+        return view('admin.employee.show', compact('employee'));
     }
 
     /**
@@ -113,8 +115,9 @@ class EmployeeController extends Controller
     public function destroy(Employee $employee)
     {
         $employee->delete();
-
+        Toastr::success('Employee Successfully Deleted!', 'Success');
         return redirect()->route('admin.employee.index')
+
             ->with('success','Supplier deleted successfully');
     }
 }

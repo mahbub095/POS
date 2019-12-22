@@ -7,21 +7,14 @@
                 <span class="hide-menu">Dashboard</span>
             </a>
         </li>
-        <li> <a class="has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="icon-envelope-open"></i><span class="hide-menu">Mailbox</span></a>
-            <ul aria-expanded="false" class="collapse">
-                <li><a href="app-email.html">Mailbox</a></li>
-                <li><a href="app-email-detail.html">Mailbox Detail</a></li>
-                <li><a href="app-compose.html">Compose Mail</a></li>
-            </ul>
-        </li>
+
         <li class="nav-small-cap">  PROFESSIONAL</li>
 
-        <li> <a class="has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="icon-people"></i><span class="hide-menu">Employee</span></a>
-            <ul aria-expanded="false" class="collapse">
-                <li><a href="{{ route('pos') }}">All Employee</a></li>
-
-
-            </ul>
+        <li>
+            <a class="waves-effect waves-dark" href="{{route('pos')}}" aria-expanded="false">
+                <i class="icon-speedometer"></i>
+                <span class="hide-menu">Point Of Sale</span>
+            </a>
         </li>
 
 
@@ -58,16 +51,10 @@
             <ul aria-expanded="false" class="collapse">
                 <li><a href="{{route('admin.advanced_salary.create')}}">Add Addvance Salary</a></li>
                 <li><a href="{{route('admin.advanced_salary.index')}}">All Addvance Salary</a></li>
-                <li><a href="crm-view-invoice.html">View Invoice</a></li>
+
             </ul>
         </li>
-        <li> <a class="has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="ti-settings"></i><span class="hide-menu">Salary</span></a>
-            <ul aria-expanded="false" class="collapse">
-                <li><a href="widget-data.html">Data Widgets</a></li>
-                <li><a href="widget-apps.html">Apps Widgets</a></li>
-                <li><a href="widget-charts.html">Charts Widgets</a></li>
-            </ul>
-        </li>
+
         <li> <a class="has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="ti-light-bulb"></i><span class="hide-menu">Category</span></a>
             <ul aria-expanded="false" class="collapse">
                 <li><a href="{{ route('admin.category.create') }}">Add Category</a></li>
@@ -92,12 +79,13 @@
                 <li><a href="{{ route('admin.expense.index') }}">All Expense</a></li>
             </ul>
         </li>
-        <li> <a class="has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="ti-settings"></i><span class="hide-menu">Expence</span></a>
+        <li> <a class="has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="ti-settings"></i><span class="hide-menu">Success Order/Sales</span></a>
             <ul aria-expanded="false" class="collapse">
         <li><a href="{{ route('pending.orders') }}">Pending Orders</a></li>
-        <li><a href="{{ route('success.orders') }}">Success Orders</a></li>
+        <li><a href="{{ route('success.orders') }}">Success Orders / Sales</a></li>
             </ul>
         </li>
+
 
         <li class="nav-small-cap"> SUPPORTS</li>
         <li>
@@ -112,20 +100,6 @@
                     @csrf
                 </form>
         </li>
-        <li> <a class="has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="icon-layers"></i><span class="hide-menu">Multi level dd</span></a>
-            <ul aria-expanded="false" class="collapse">
-                <li><a href="javascript:void(0)">item 1.1</a></li>
-                <li><a href="javascript:void(0)">item 1.2</a></li>
-                <li> <a class="has-arrow" href="javascript:void(0)" aria-expanded="false">Menu 1.3</a>
-                    <ul aria-expanded="false" class="collapse">
-                        <li><a href="javascript:void(0)">item 1.3.1</a></li>
-                        <li><a href="javascript:void(0)">item 1.3.2</a></li>
-                        <li><a href="javascript:void(0)">item 1.3.3</a></li>
-                        <li><a href="javascript:void(0)">item 1.3.4</a></li>
-                    </ul>
-                </li>
-                <li><a href="javascript:void(0)">item 1.4</a></li>
-            </ul>
-        </li>
+
     </ul>
 </nav>

@@ -1,7 +1,7 @@
  @include('layouts.adminapp')
 
     <!-- Content Wrapper. Contains page content -->
-    <div class="content-wrapper">
+    <div class="page-wrapper">
         <!-- Content Header (Page header) -->
         <section class="content-header">
             <div class="container-fluid">
@@ -26,6 +26,8 @@
                         <div class="card">
                             <div class="card-header">
                                 <h3 class="card-title">PRODUCTS LISTS</h3>
+                                <div class="panel-heading"><h3 class="panel-title">Add Product
+                                        <a href="{{ route('import.product') }}" class="btn btn-sm btn-danger pull-right">Import Product</a></h3></div>
                             </div>
                             <!-- /.card-header -->
                             <div class="card-body">
@@ -70,7 +72,7 @@
                                             <td>{{ $key + 1 }}</td>
                                             <td>{{ $product->name }}</td>
                                             <td>
-                                                <img class="img-rounded" style="height:35px; width: 35px;" src="{{ URL::asset("storage/product/".$product->image) }}" alt="{{ $product->name }}">
+                                                <img class="img-rounded" style="height:35px; width: 35px;" src="{{ URL::asset("images/".$product->image) }}" alt="{{ $product->name }}">
                                             </td>
                                             <td>{{ $product->category->name }}</td>
                                             <td>{{ $product->supplier->name }}</td>

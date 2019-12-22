@@ -1,7 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bc2e0ea6-29a4-4e91-8551-d302b7e791e2" name="Default Changelist" comment="" />
+    <list default="true" id="bc2e0ea6-29a4-4e91-8551-d302b7e791e2" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/inventory.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inventory.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CategoryController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CustomerController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CustomerController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/EmployeeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/EmployeeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PosController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PosController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProductController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Product.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/category/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/category/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/category/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/category/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/employee/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/employee/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/product/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/product/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/adminapp.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/adminapp.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/partials/navmenu.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/partials/navmenu.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pos.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pos.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,6 +35,9 @@
     <execution>
       <executable path="composer" />
     </execution>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -114,25 +139,32 @@
       <path value="$PROJECT_DIR$/vendor/nexmo/client-core" />
       <path value="$PROJECT_DIR$/vendor/nexmo/client" />
       <path value="$PROJECT_DIR$/vendor/zendframework/zend-diactoros" />
+      <path value="$PROJECT_DIR$/vendor/maatwebsite/excel" />
+      <path value="$PROJECT_DIR$/vendor/markbaker/complex" />
+      <path value="$PROJECT_DIR$/vendor/phpoffice/phpspreadsheet" />
+      <path value="$PROJECT_DIR$/vendor/markbaker/matrix" />
+      <path value="$PROJECT_DIR$/vendor/brian2694/laravel-toastr" />
     </include_path>
   </component>
   <component name="ProjectId" id="1UwKPi86wD6UFtFgrJQf5MJ5kJ6" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\laragon\www\inventory\resources\views" />
-      <recent name="D:\laragon\www\inventory\resources\views\admin" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\laragon\www\inventory\resources\views" />
+      <recent name="D:\laragon\www\inventory\app" />
       <recent name="D:\laragon\www\inventory\database\migrations" />
       <recent name="D:\laragon\www\inventory\resources\views\layouts" />
       <recent name="D:\laragon\www\inventory\resources\views\admin\expense" />
-      <recent name="D:\laragon\www\inventory\resources\views\admin\category" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\laragon\www\inventory\resources\views" />
+      <recent name="D:\laragon\www\inventory\resources\views\admin" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -169,11 +201,30 @@
       <workItem from="1576422447654" duration="10113000" />
       <workItem from="1576469890364" duration="7159000" />
       <workItem from="1576509347257" duration="7353000" />
+      <workItem from="1576835005988" duration="8962000" />
+      <workItem from="1576861062996" duration="8531000" />
+      <workItem from="1576904928205" duration="1729000" />
+      <workItem from="1576906725933" duration="7115000" />
+      <workItem from="1576937270218" duration="5449000" />
+      <workItem from="1577026297460" duration="392000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -187,6 +238,11 @@
           <url>file://$PROJECT_DIR$/resources/views/admin/expense/index.blade.php</url>
           <line>66</line>
           <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/resources/views/layouts/adminapp.blade.php</url>
+          <line>332</line>
+          <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

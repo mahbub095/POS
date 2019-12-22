@@ -10,7 +10,7 @@
     <meta name="author" content="">
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="{{asset('admin/assets/images/favicon.png')}}">
-    <title>Elite Admin Template - The Ultimate Multipurpose admin template</title>
+    <title>Inventory Mangement System</title>
     <!-- This page CSS -->
     <!-- chartist CSS -->
     <link href="{{asset('admin/assets/node_modules/morrisjs/morris.css')}}" rel="stylesheet">
@@ -27,6 +27,11 @@
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+
     <![endif]-->
 </head>
 
@@ -37,7 +42,7 @@
 <div class="preloader">
     <div class="loader">
         <div class="loader__figure"></div>
-        <p class="loader__label">Elite admin</p>
+        <p class="loader__label">Point Of Sell</p>
     </div>
 </div>
 <!-- ============================================================== -->
@@ -64,9 +69,11 @@
                     <!--End Logo icon -->
                     <!-- Logo text --><span>
                          <!-- dark Logo text -->
-                         <img src="{{asset('admin/assets/images/logo-text.png')}}" alt="homepage" class="dark-logo" />
+                       {{--  <img src="--}}{{--{{asset('admin/assets/images/logo-text.png')}}--}}{{--" alt="homepage" class="dark-logo" />--}}
                         <!-- Light Logo text -->
-                         <img src="{{asset('admin/assets/images/logo-light-text.png')}}" class="light-logo" alt="homepage" /></span> </a>
+
+                    </span>
+                </a>{{--                         <img src="--}}{{--{{asset('admin/assets/images/logo-light-text.png')}}--}}{{--" class="light-logo" alt="homepage" /></span> </a>--}}
             </div>
             <!-- ============================================================== -->
             <!-- End Logo -->
@@ -82,11 +89,11 @@
                     <!-- ============================================================== -->
                     <!-- Search -->
                     <!-- ============================================================== -->
-                    <li class="nav-item">
+                 {{--   <li class="nav-item">
                         <form class="app-search d-none d-md-block d-lg-block">
                             <input type="text" class="form-control" placeholder="Search & enter">
                         </form>
-                    </li>
+                    </li>--}}
                 </ul>
                 <!-- ============================================================== -->
                 <!-- User profile and search -->
@@ -95,7 +102,7 @@
                     <!-- ============================================================== -->
                     <!-- Comment -->
                     <!-- ============================================================== -->
-                    <li class="nav-item dropdown">
+           {{--         <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle waves-effect waves-dark" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="ti-email"></i>
                             <div class="notify"> <span class="heartbit"></span> <span class="point"></span> </div>
                         </a>
@@ -137,14 +144,14 @@
                                 </li>
                             </ul>
                         </div>
-                    </li>
+                    </li>--}}
                     <!-- ============================================================== -->
                     <!-- End Comment -->
                     <!-- ============================================================== -->
                     <!-- ============================================================== -->
                     <!-- Messages -->
                     <!-- ============================================================== -->
-                    <li class="nav-item dropdown">
+               {{--     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle waves-effect waves-dark" href="" id="2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="icon-note"></i>
                             <div class="notify"> <span class="heartbit"></span> <span class="point"></span> </div>
                         </a>
@@ -186,14 +193,14 @@
                                 </li>
                             </ul>
                         </div>
-                    </li>
+                    </li>--}}
                     <!-- ============================================================== -->
                     <!-- End Messages -->
                     <!-- ============================================================== -->
                     <!-- ============================================================== -->
                     <!-- mega menu -->
                     <!-- ============================================================== -->
-                    <li class="nav-item dropdown mega-dropdown"> <a class="nav-link dropdown-toggle waves-effect waves-dark" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="ti-layout-width-default"></i></a>
+                 {{--   <li class="nav-item dropdown mega-dropdown"> <a class="nav-link dropdown-toggle waves-effect waves-dark" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="ti-layout-width-default"></i></a>
                         <div class="dropdown-menu animated bounceInDown">
                             <ul class="mega-dropdown-menu row">
                                 <li class="col-lg-3 col-xlg-2 m-b-30">
@@ -294,11 +301,12 @@
                                 </li>
                             </ul>
                         </div>
-                    </li>
+                    </li>--}}
                     <!-- ============================================================== -->
                     <!-- End mega menu -->
                     <!-- ============================================================== -->
-                    <li class="nav-item right-side-toggle"> <a class="nav-link  waves-effect waves-light" href="javascript:void(0)"><i class="ti-settings"></i></a></li>
+                   {{-- <li class="nav-item right-side-toggle"> <a class="nav-link  waves-effect waves-light" href="javascript:void(0)"><i class="ti-settings"></i></a></li>
+                --}}
                 </ul>
             </div>
         </nav>
@@ -317,23 +325,29 @@
                 <div class="user-pro-body">
                     <div><img src="{{asset('admin/assets/images/users/2.jpg')}}" alt="user-img" class="img-circle"></div>
                     <div class="dropdown">
-                        <a href="javascript:void(0)" class="dropdown-toggle u-dropdown link hide-menu" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Steave Gection <span class="caret"></span></a>
+                        <a href="javascript:void(0)" class="dropdown-toggle u-dropdown link hide-menu" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{{ Auth::user()->name }}}<span class="caret"></span></a>
                         <div class="dropdown-menu animated flipInY">
                             <!-- text-->
-                            <a href="javascript:void(0)" class="dropdown-item"><i class="ti-user"></i> My Profile</a>
+
                             <!-- text-->
-                            <a href="javascript:void(0)" class="dropdown-item"><i class="ti-wallet"></i> My Balance</a>
-                            <!-- text-->
-                            <a href="javascript:void(0)" class="dropdown-item"><i class="ti-email"></i> Inbox</a>
-                            <!-- text-->
-                            <div class="dropdown-divider"></div>
+                          {{--  <div class="dropdown-divider"></div>
                             <!-- text-->
                             <a href="javascript:void(0)" class="dropdown-item"><i class="ti-settings"></i> Account Setting</a>
+                           --}}
                             <!-- text-->
                             <div class="dropdown-divider"></div>
                             <!-- text-->
-                            <a href="pages-login.html" class="dropdown-item"><i class="fas fa-power-off"></i> Logout</a>
-                            <!-- text-->
+                           {{-- <a href="{{ route('logout') }}" class="dropdown-item"><i class="fas fa-power-off"></i> Logout</a>
+                            <!-- text-->--}}
+                            <a class="dropdown-item" aria-expanded="false" href="{{ route('logout') }}"
+                               onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                {{ __('Logout') }}
+                            </a>
+
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                @csrf
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -395,6 +409,11 @@
 <!-- jQuery peity -->
 <script src="{{asset('admin/assets/node_modules/peity/jquery.peity.min.js')}}"></script>
 <script src="{{asset('admin/assets/node_modules/peity/jquery.peity.init.js')}}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/js/toastr.js"></script>
+<script src="{{asset('https://unpkg.com/sweetalert/dist/sweetalert.min.js')}}"></script>
+
+
+
 </body>
 
 </html>

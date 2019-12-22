@@ -1,6 +1,6 @@
 @extends('layouts.adminapp')
 @section('content')
-    <div class="content-page">
+    <div class="page-wrapper">
         <div class="content">
             <div class="container">
                 <!-- Page-Title -->
@@ -9,7 +9,7 @@
                         <h4 class="pull-left page-title text-white">POS (Point of Sale) </h4>
                         <ol class="breadcrumb pull-right">
                             <li><a href="#" class="text-white"> </a></li>
-                            <li class="text-white">{{ date('d/m/y') }}</li>
+                            <li class="text-blue">{{ date('d/m/y') }}</li>
                         </ol>
                     </div>
                 </div><br>
@@ -62,38 +62,7 @@
 
                             </ul>
                             <div class="pricing-footer bg-primary">
-                                <p style="font-size: 19px;"> Quantity: {{ Cart::count() }}</p>
-                                <p style="font-size: 19px;"> Sub Total: {{ Cart::subtotal() }}</p>
-                                <p style="font-size: 19px;"> vat:{{ Cart::tax() }}</p>
-                                <hr>
-                                <p><h2 class="text-white">Total:</h2> <h1 class="text-white">{{ Cart::total() }}</h1></p>
 
-
-                                <form method="post" action="{{ url('/invoice') }}">
-                                    @csrf
-                                    <div class="panel"><br><br>
-                                        @if ($errors->any())
-                                            <div class="alert alert-danger">
-                                                <ul>
-                                                    @foreach ($errors->all() as $error)
-                                                        <li>{{ $error }}</li>
-                                                    @endforeach
-                                                </ul>
-                                            </div>
-                                        @endif
-                                        <h4 class="text-info">Select Customer
-                                            <a href="#" class="btn btn-sm btn-primary waves-effect waves-light pull-right" data-toggle="modal" data-target="#con-close-modal">Add New</a>
-                                        </h4>
-                                        @php
-                                            $customer=DB::table('customers')->get();
-                                        @endphp
-                                        <select class="form-control" name="cus_id">
-                                            <option disabled="" selected="">select customer</option>
-                                            @foreach($customer as $cus)
-                                                <option value="{{ $cus->id }}">{{ $cus->name }}</option>
-                                            @endforeach
-                                        </select>
-                                    </div>
                             </div>
                             <button type="submit" class="btn btn-success"> Create Invoice</button>
                         </div>
@@ -125,8 +94,8 @@
                                         <input type="hidden" name="qty" value="1">
                                         <input type="hidden" name="price" value="{{ $row->selling_price }}">
                                         <td>
-                                            {{-- <a href="#" style="font-size: 30px;"><i class="fas fa-plus-square"></i></a> --}}
-                                            <img src="{{ URL::to($row->image) }}" width="60px" height="60px">
+
+                                            <img width="50" height="50" src="{{ URL::asset('images/'. $row->image) }}">
                                         </td>
                                         <td>{{ $row->name }}</td>
                                         <td>{{ $row->name }}</td>
@@ -256,18 +225,5 @@
         </div><!-- /.modal -->
     </form>
 
-    <script type="text/javascript">
-        function readURL(input) {
-            if (input.files && input.files[0]) {
-                var reader = new FileReader();
-                reader.onload = function (e) {
-                    $('#image')
-                        .attr('src', e.target.result)
-                        .width(80)
-                        .height(80);
-                };
-                reader.readAsDataURL(input.files[0]);
-            }
-        }
-    </script>
+
 @endsection

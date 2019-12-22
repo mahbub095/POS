@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use App\Category;
 use App\Product;
 use App\Supplier;
+use App\Exports\ProductsExport;
+use Maatwebsite\Excel\Facades\Excel;
+use App\Imports\productsImport;
 use Illuminate\Http\Request;
 
 class ProductController extends Controller
@@ -108,4 +111,35 @@ class ProductController extends Controller
     {
         //
     }
+
+
+//products import and export
+    public function ImportProduct()
+    {
+        return view('import_product');
+    }
+
+    public function export()
+    {
+        return Excel::download(new ProductsExport, 'products.xlsx');
+    }
+
+
+    public function import(Request $request)
+    {
+        $import=Excel::import(new ProductsImport, $request->file('import_file'));
+        if ($import) {
+            $notification=array(
+                'messege'=>'Product Import Successfully',
+                'alert-type'=>'success'
+            );
+            return Redirect()->route('home')->with($notification);
+        }else{
+            return Redirect()->back();
+        }
+
+    }
+
+
+
 }

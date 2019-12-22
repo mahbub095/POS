@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use App\Customer;
 use Illuminate\Http\Request;
 
+
 class CustomerController extends Controller
 {
     /**
@@ -17,7 +18,7 @@ class CustomerController extends Controller
     {
         $this->middleware('auth');
     }
-    
+
     public function index()
     {
         //
@@ -69,9 +70,9 @@ class CustomerController extends Controller
      * @param int $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Customer $customer)
     {
-        //
+        return view('admin.customer.show', compact('customer'));
     }
 
     /**

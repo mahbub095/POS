@@ -4,9 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Category;
 use Illuminate\Http\Request;
-
+use Brian2694\Toastr\Facades\Toastr;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Str;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class CategoryController extends Controller
 {
@@ -60,7 +61,8 @@ class CategoryController extends Controller
         $category->name = $request->input('name');
         $category->slug = Str::slug($request->input('name'));
         $category->save();
-        session()->flash('success', 'Category Added');
+        //session()->flash('success', 'Category Added');
+        Toastr::success('Category successfully deleted', 'Success');
         return redirect()->back();
     }
 
@@ -124,8 +126,7 @@ class CategoryController extends Controller
     public function destroy(Category $category)
     {
         $category->delete();
-
-        return redirect()->route('admin.category.index')
-            ->with('success','Category deleted successfully');
+        Toastr::success('Category successfully deleted', 'Success');
+        return redirect()->route('admin.category.index');
     }
 }

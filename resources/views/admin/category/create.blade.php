@@ -27,6 +27,15 @@
         <div class="row">
             <div class="col-12">
                 <div class="card">
+                    @if ($errors->any())
+                        <div class="alert alert-danger">
+                            <ul>
+                                @foreach ($errors->all() as $error)
+                                    <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    @endif
                     <div class="card-body">
                         <h5 class="card-title">Category Name</h5>
                    {{--     <form class="form-material form-horizontal m-t-30">--}}
@@ -39,7 +48,8 @@
                                     <input type="text"  name="name" class="form-control" placeholder="Enter Category name">
                                 </div>
                             </div>
-                            <button type="submit" class="btn btn-info waves-effect waves-light m-r-10">Submit</button>
+                            <button  class="btn btn-info waves-effect waves-light m-r-10" onclick="submit({{ $category->id }})" >Submit</button>
+
                         </form>
                     </div>
                 </div>
@@ -48,3 +58,42 @@
     </div>
 
 </div>
+
+<script src="{{ asset('assets/backend/plugins/datatables/jquery.dataTables.js') }}"></script>
+<script src="{{ asset('assets/backend/plugins/datatables/dataTables.bootstrap4.js') }}"></script>
+<!-- SlimScroll -->
+<script src="{{ asset('assets/backend/plugins/slimScroll/jquery.slimscroll.min.js') }}"></script>
+<!-- FastClick -->
+<script src="{{ asset('assets/backend/plugins/fastclick/fastclick.js') }}"></script>
+
+<!-- Sweet Alert Js -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.29.1/dist/sweetalert2.all.min.js"></script>
+
+
+<script>
+    $(function () {
+        $("#example1").DataTable();
+        $('#example2').DataTable({
+            "paging": true,
+            "lengthChange": false,
+            "searching": false,
+            "ordering": true,
+            "info": true,
+            "autoWidth": false
+        });
+    });
+</script>
+
+<script type="text/javascript">
+    function submit(id) {
+        Swal.fire({
+            position: 'top-end',
+            icon: 'success',
+            title: 'Your work has been saved',
+            showConfirmButton: false,
+            timer: 1500
+        })
+
+
+    }
+</script>
